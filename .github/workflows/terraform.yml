@@ -36,12 +36,3 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
         ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-
-    - name: Take ssh-key
-      run: terraform output -raw tls_private_key > id_rsa
-
-
-    - name: Cache
-      uses: actions/cache@v3
-      with:
-        path: ./id_rsa
