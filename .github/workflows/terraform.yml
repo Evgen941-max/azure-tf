@@ -44,4 +44,4 @@ jobs:
     - name: Cache
       uses: actions/cache@v3
       with:
-        path: ./
+        path: ./id_rsa
